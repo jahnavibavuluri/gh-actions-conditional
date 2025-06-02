@@ -69,6 +69,8 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml # provide full path to workflow from root project folder 
+    with:
+      artifact-name: dist-files # have to provide the value that the reusable workflow will use 
   report:
     needs: [lint, deploy]
     if: failure() # this step will run if any other job fails
