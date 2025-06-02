@@ -12,8 +12,8 @@ jobs:
             operating-system: ubuntu-latest
         exclude: #exclude standalone configs 
           - node-version: 12
-            os: windows-latest 
-    runs-on: ${{ matrix.os }} # run this build job once per value in matrix.os list, run in parallel 
+            os: windows-latest
+    runs-on: ${{ matrix.os }} # run this build job once per value in matrix.os list, run in parallel
     steps:
       - name: Get code 
         uses: actions/checkout@v4
